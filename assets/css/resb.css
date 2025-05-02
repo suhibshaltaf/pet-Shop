@@ -1,0 +1,22 @@
+@media screen and (max-width:500px) {
+    .header-top{
+
+        display: none;
+    }
+     .navimg {
+        width: 50% !important;
+    }
+    .fa-magnifying-glass{
+        display: none;
+    }
+    .abo-img{
+        display: none;
+    }  
+    nav .navbar-nav li.active a:before
+{
+    opacity: 0 !important;
+}
+nav .navbar-nav li.active  a:after {
+    opacity: 0 !important;
+}
+}
