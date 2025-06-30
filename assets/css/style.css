@@ -47,8 +47,11 @@ a a:focus,
 a,
 a:hover {
     text-decoration: none;
+    color: white !important;
 }
-
+.fa{
+    color: var(--main-color);
+}
 @media (min-width: 1200px) {
     .container {
         width: 1170px !important;
