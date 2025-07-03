@@ -13,7 +13,6 @@ li {
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-/* font-family: 'Open Sans', sans-serif; */
 :root {
     --main-color: #64BE43;
 }
@@ -47,6 +46,8 @@ a a:focus,
 a,
 a:hover {
     text-decoration: none;
+}
+.navbar a{
     color: white !important;
 }
 .fa{
@@ -191,7 +192,6 @@ nav img {
     position: relative;
 }
 
-/* */
 .about .about-text h3 {
     font-family: Dosis, sans-serif;
     font-size: 24px;
@@ -211,15 +211,6 @@ nav img {
 
 }
 
-/* Font name: Dosis, sans-serif
-
-Font size: 30px
-
-Font weight: 700
-
-Line height: 42px
-
-Font color: rgb(100, 190, 67) */
 .page-title h2 {
     font-family: Dosis, sans-serif;
     color: #64BE43;
@@ -260,15 +251,7 @@ Font color: rgb(100, 190, 67) */
     bottom: 10%;
 }
 
-/* .about:after {
-position: absolute;
-right: 0;
-top: 0;
-width: 50%;
-height: 100%;
-content: "";
-background: url(../img/about-img.png) no-repeat scroll right 20% bottom / auto 100%;
-} { */
+
 
 .abo-img img {
     width: 100%;
@@ -306,7 +289,7 @@ background: url(../img/about-img.png) no-repeat scroll right 20% bottom / auto 1
 }
 
 .bttn-more {
-    color: #64BE43;
+    color: #64BE43 !important;
     text-transform: uppercase;
 }
 
@@ -675,7 +658,7 @@ background: url(../img/about-img.png) no-repeat scroll right 20% bottom / auto 1
     color: #64BE43;
 }
 
-/* .price-plan:before {
+
 content: "";
 position: ;
 position: absolute;
@@ -690,7 +673,6 @@ z-index: -1;
 transition: 0.2s;
 } */
 
-.read-more a{}
 .single-price:hover .price-plan:before {
     opacity: 0.6;
     background-color: #64BE43;
@@ -839,7 +821,9 @@ transition: 0.2s;
     margin-bottom: 20px;
 }
 
-.client .carousel-indicators {}
+.client .carousel-indicators {
+    margin: -25px;
+}
 
 .client-area .carousel-indicators li.active {
     border: 1px solid #ffffff;
@@ -912,12 +896,9 @@ transition: 0.2s;
     opacity: 1;
 }
 
-/*====================
-Contact Area
-====================*/
 
 .contact-area .section-bg {
-    background-image: url("images/contact-bg.jpg");
+    background-image: url("../img/contact-bg.jpg");
 }
 
 .contact-area .section-bg::after {
@@ -960,9 +941,6 @@ Contact Area
     margin-right: 2%;
 }
 
-/*====================
-11. Footer-area
-=====================*/
 
 .footer-logo {
     margin-bottom: 20px;
@@ -986,7 +964,7 @@ Contact Area
 }
 
 .single-footer a {
-    color: #464646;
+    color: #464646 !important;
 }
 
 .single-footer h2 {
@@ -1139,23 +1117,34 @@ label.mt20.valid {
 }
 
 #scrollUp {
-    background-color: #64BE43;
+    background-color: #64BE43; 
     border: 1px solid #64BE43;
     border-radius: 2px;
     bottom: 30px;
-    color: #fff;
-    height: 40px;
     right: 30px;
-    text-align: center;
-    line-height: 2.3;
     width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    z-index: 2147483647;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#scrollUp i {
+    color: #ffffff; 
+    transition: color 0.3s ease;
 }
 
 #scrollUp:hover {
-    background: #fff;
-    color: #64BE43;
+    background-color: #ffffff; 
+    border-color: #64BE43;
 }
 
+#scrollUp:hover i {
+    color: #64BE43; 
+}
 .contact-area {
 
     text-align: center;
@@ -1268,11 +1257,7 @@ nav .navbar-nav li.active  a:after {
     z-index: 0;
 }
 
-/* .carousel-indicators button{
-position: absolute;
-right: 10px !important;
-top: 10px;
-} */
+
 .ddd {
     position: absolute;
     left: 5px ! important;
@@ -1284,98 +1269,68 @@ top: 10px;
 }
 
 .about .about-text-button .btt:hover {
-    color: var(--main-color);
+    color: var(--main-color) !important;
     background-color: #fff;
     border: var(--main-color) 1px solid;
 
 }
 
-.latest-blog a {
-    color: var(--main-color);
-}
 
+.latest-blog a {
+    color: black;
+}
 .latest-blog a:hover {
     color: var(--main-color);
 }
 
-.percentage {
-    width: 50%;
-    height: 50%;
-    border-radius: 50% var(--main-color);
-    -webkit-border-radius: 50% var(--main-color);
-    -moz-border-radius: 50% var(--main-color);
-    -ms-border-radius: 50% var(--main-color);
-    -o-border-radius: 50% var(--main-color);
-
-}
 
 .single-skill .skill {
-    position: relative;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(#ddd 0deg, #ddd 360deg); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Dosis', sans-serif;
+  color: #64BE43;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.single-skill .skill::before {
+  content: "";
+  position: absolute;
+  top: 10px;  
+  left: 10px;
+  width: 100px;  
+  height: 100px;
+  background: white; 
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .single-skill .skill span {
-    position: absolute;
-    display: inline-block;
-    font-size: 80px;
-    line-height: 1;
-    color: #64BE43;
-    text-align: center;
-    width: 100%;
-    height: 85px;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 700;
-}
-
-.single-skill .skill canvas {
-    margin: auto;
-    display: block;
+  position: relative;
+  z-index: 2;  
+  font-size: 32px;
+  font-weight: 700;
+  color: #64BE43;
 }
 
 .single-skill h3 {
-    color: #64BE43;
-    text-transform: uppercase;
-    margin-top: 30px;
-    text-align: center;
-    display: block;
-    font-weight: 600;
-    font-size: 22px;
-    margin-bottom: 0;
+  color: #64BE43;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 0;
 }
-
-.chart-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.single-skill {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.skill {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: relative;
-    margin: 0 auto;
-    background: conic-gradient(transparent 0%, transparent 50%, transparent 50%, transparent 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 24px;
-    color: #333;
-    border: 10px solid #27ae60;
-    position: relative;
-}
-
-.skill span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+.fa-brands{
+    padding: 5px;
 }

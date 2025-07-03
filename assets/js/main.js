@@ -50,3 +50,56 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
     document.getElementById("modalImage").src = imageUrls[currentIndex];
   }
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const skills = document.querySelectorAll(".skill");
+
+    skills.forEach(skill => {
+      const percent = parseInt(skill.getAttribute("data-percent")) || 0;
+      let current = 0;
+      const span = skill.querySelector("span");
+
+      function animate() {
+        if (current <= percent) {
+          span.textContent = current + "%";
+
+          skill.style.background = `conic-gradient(#64BE43 0deg, #64BE43 ${current * 3.6}deg, #ddd ${current * 3.6}deg, #ddd 360deg)`;
+
+          current++;
+          requestAnimationFrame(animate);
+        }
+      }
+
+      animate();
+    });
+  });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll('[data-bs-target="#photographyCarousel"]');
+
+    items.forEach(item => {
+      item.addEventListener("click", function () {
+        // إزالة active من جميع العناصر
+        items.forEach(i => i.classList.remove("active"));
+        // إضافة active للعنصر الحالي
+        this.classList.add("active");
+      });
+    });
+  });
+
+  
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollUpBtn = document.getElementById("scrollUp");
+  const section2 = document.querySelectorAll("section")[1]; // السكشن الثاني
+
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+    const triggerPoint = section2.offsetTop + section2.offsetHeight;
+
+    if (scrollPosition > triggerPoint) {
+      scrollUpBtn.style.display = "block";
+    } else {
+      scrollUpBtn.style.display = "none";
+    }
+  });
+});
